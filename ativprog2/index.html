@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Formulario</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<form action="cadastraCliente.php" method="POST"> 
+<h1> Cadastro de cliente</h1>
+<fieldset>
+<legend> Dados pessoais </legend>
+<div><label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" minlength="2" maxlength="50" required autofocus></div>
+
+<div><label for="E-mail">E-mail:</label>
+<input type="email" id="E-mail" name="E-mail" placeholder="digite seu email" required></div>
+
+<div><label for="CPF">CPF:</label>
+<input type="text" id="CPF" name="CPF" placeholder=" 000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required></div>
+
+
+<div><label for="Idade">Idade:</label>
+<input type="number" id="Idade" name="Idade" placeholder="digite sua idade" required></div>
+
+<div><label for="Telefone">Telefone:</label>
+<input type="tel" id="Telefone" name="Telefone" placeholder="ex:(00) 00 0 0000-0000" required></div>
+
+<div><label for="data_nascimento">Data de Nascimento:</label>
+ <input type="date" id="data_nascimento" name="data_nascimento"></div>
+ 
+ 
+ <div><label for="Nacionalidade">Nacionalidade:</label>
+<input type="text" id="Nacionalidade" name="Nacionalidade" value="BRASILEIRA" disabled></div>
+
+
+<fieldset>
+<legend>Sexo</legend>
+<div>
+<input type="radio" id="masculino" name="Sexo" value="masculino">
+<label for="masculino">masculino</label>
+</div>
+<div>
+<input type="radio" id="feminino" name="Sexo" value="feminino">
+<label for="feminino">feminino</label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Estado Civil</legend>
+<div>
+<input type="radio" id="solteiro" name="estado civil" value="solteiro">
+<label for="solteiro">solteiro</label>
+</div>
+<div>
+<input type="radio" id="casado" name="estado civil" value="casado">
+<label for="casado">casado</label>
+</div>
+<div>
+<input type="radio" id="divorciado" name="estado civil" value="divorciado">
+<label for="divorciado">divorciado</label>
+</div>
+</fieldset>
+</fieldset>
+<fieldset>
+<legend>Endereço de Entrega</legend>
+<div><label for="CEP">CEP:</label><br>
+<input type="number" id="CEP" name="CEP"  placeholder="00000-000" required></div>
+
+<div><label for="tipo_logradouro">Tipo de Logradouro:</label>
+<select id="tipo_logradouro" name="tipo_logradouro" required>
+<option value="" disabled selected hidden>&nbsp;</option>
+<option value="praca">Rua</option>
+<option value="avenida">Avenida</option>
+<option value="rua">Praça</option>
+<option value="especificarei abaixo">especificarei abaixo</option></select></div>
+
+<div><label for="Logradouro">Logradouro:</label>
+<input type="text" id="Logradouro" name="Logradouro"  placeholder="Ex:Centro" required></div>
+
+<div><label for="Bairo">Bairo:</label>
+<input type="text" id="Bairo" name="Bairo"  placeholder="Seu bairo" required></div>
+
+<div><label for="Cidade">Cidade:</label>
+<input type="text" id="Cidade" name="Cidade"  placeholder="nome da sua cidade" required> </div>
+
+<div><label for="Estado">Estado:</label>
+<input type="text" id="Estado" name="Estado"  placeholder="Seu Estado" required> </div>
+
+
+</fieldset>
+
+<fieldset>
+<legend>Informações adcionais</legend>
+<fieldset>
+<legend>Seus interesses</legend>
+<div>
+<input type="checkbox" id="filmes" name="Seus interesses" value="filmes">
+<label for="filmes">filmes</label>
+</div>
+<div>
+<input type="checkbox" id="informatica" name="Seus interesses" value="informatica">
+<label for="informatica">informatica</label>
+</div>
+<div>
+<input type="checkbox" id="games" name="Seus interesses" value="games">
+<label for="games">games</label>
+</div>
+<div>
+<input type="checkbox" id="livros" name="Seus interesses" value="livros">
+<label for="livros">livros</label>
+</div>
+<div>
+<input type="checkbox" id="roupas" name="Seus interesses" value="roupas">
+<label for="roupas">roupas</label>
+</div>
+<div>
+<input type="checkbox" id="futebol" name="Seus interesses" value="futebol">
+<label for="futebol">futebol</label>
+</div>
+<div>
+<input type="checkbox" id="series" name="Seus interesses" value="series">
+<label for="series">series</label>
+</div>
+</fieldset>
+<div><label for="informacoes_complementares">Informações Complementares:</label></div>
+  <textarea id="informacoes_complementares" name="informacoes_complementares" rows="6" cols="50"  ></textarea>
+  
+ <div><label for="arquivo">Tipo de arquivo:</label>
+<input type="text" id="caixa_arquivo" name="arquivo">
+ <input type="file" accept=".png, .jpg, .jpeg" id="arquivo" name="arquivo">
+<input type="hidden" name="campo_oculto" value="ValorOculto"></div>
+
+     
+<input type="submit" value="Enviar">
+</fieldset> 
+</form>
+</body>
